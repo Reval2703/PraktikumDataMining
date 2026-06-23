@@ -36,7 +36,7 @@ st.dataframe(df.head())
     # =====================
     # INFORMASI DATASET
     # =====================
-    st.header("2. Informasi Dataset")
+ 
 
     col1, col2 = st.columns(2)
 
