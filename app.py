@@ -20,21 +20,18 @@ st.set_page_config(
 st.title("📱 Analisis Kecanduan Smartphone Menggunakan Decision Tree")
 
 # =====================
-
 # LOAD DATASET
-
 # =====================
 
 try:
-df = pd.read_csv("smartphone_addiction_dataset.csv")
-st.success("Dataset berhasil dimuat")
+    df = pd.read_csv("Smartphone_Usage_And_Addiction_Analysis_7500_.csv")
+    st.success("Dataset berhasil dimuat")
 except Exception as e:
-st.error(f"Gagal membaca dataset: {e}")
-st.stop()
+    st.error(f"Gagal membaca dataset: {e}")
+    st.stop()
 
-
-    st.header("1. Preview Dataset")
-    st.dataframe(df.head())
+st.header("1. Preview Dataset")
+st.dataframe(df.head())
 
     # =====================
     # INFORMASI DATASET
