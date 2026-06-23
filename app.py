@@ -19,17 +19,19 @@ st.set_page_config(
 
 st.title("📱 Analisis Kecanduan Smartphone Menggunakan Decision Tree")
 
-uploaded_file = st.file_uploader(
-    "Upload Dataset CSV",
-    type=["csv"]
-)
+# =====================
 
-if uploaded_file is not None:
+# LOAD DATASET
 
-    # =====================
-    # LOAD DATASET
-    # =====================
-    df = pd.read_csv(uploaded_file)
+# =====================
+
+try:
+df = pd.read_csv("smartphone_addiction_dataset.csv")
+st.success("Dataset berhasil dimuat")
+except Exception as e:
+st.error(f"Gagal membaca dataset: {e}")
+st.stop()
+
 
     st.header("1. Preview Dataset")
     st.dataframe(df.head())
