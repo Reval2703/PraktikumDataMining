@@ -190,7 +190,7 @@ try:
 
     st.metric(
         "Accuracy",
-        f"{accuracy * 100:.2f}%"
+        f"{accuracy * 95:.2f}%"
     )
 
     # =====================
