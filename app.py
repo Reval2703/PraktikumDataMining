@@ -27,7 +27,7 @@ st.title("📱 Analisis Kecanduan Smartphone Menggunakan Decision Tree")
 
 df = pd.read_csv("Smartphone_Usage_And_Addiction_Analysis_7500.csv")
 st.success("Dataset berhasil dimuat")
-except Exception as e:
+
 st.error(f"Gagal membaca dataset: {e}")
 st.stop()
 
